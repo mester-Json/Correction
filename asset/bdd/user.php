@@ -16,7 +16,7 @@ try {
         exit();
     }
 
-    $updateStmt = $db->prepare("UPDATE corection SET correction = correction WHERE id = :id");
+    $updateStmt = $db->prepare("UPDATE corection SET correction = correction +1 WHERE id = :id");
     $updateStmt->bindParam(':id', $id);
     $updateStmt->execute();
 

@@ -1,8 +1,10 @@
 <?php
 define('HOST', 'localhost');
-define('DB_Name', '');
+define('DB_Name', 'Corection');
 define('USER', '');
 define('PASS', '');
+
+
 
 try {
     $db = new PDO("mysql:host=" . HOST . ";dbname=" . DB_Name, USER, PASS);
@@ -14,16 +16,7 @@ try {
     $checkStmt->bindParam(':id', $id);
     $checkStmt->execute();
 
-    if ($checkStmt->rowCount() == 0) {
-        header("HTTP/1.0 404 Not Found");
-        exit();
-    }
 
-    $updateStmt = $db->prepare("UPDATE corection SET correction = correction + 1 WHERE id = :id");
-    $updateStmt->bindParam(':id', $id);
-    $updateStmt->execute();
-
-    echo "Record updated successfully";
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
