@@ -145,7 +145,7 @@ function incrementerCorrection(id) {
     else {
       utilisateur.correction++;
       $.ajax({
-        url: './alog/asset/bdd/user.php',
+        url: 'https://mester-json.github.io/Correction/asset/bdd/user.php',
         type: 'POST',
         data: {
           id: utilisateur.id,
@@ -159,7 +159,7 @@ function incrementerCorrection(id) {
 
 function fetchData() {
   $.ajax({
-    url: './asset/bdd/aff.php',
+    url: 'https://mester-json.github.io/Correction/asset/bdd/aff.php',
     type: 'GET',
     success: function (data) {
       const div = document.getElementById('user');
