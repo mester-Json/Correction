@@ -1,3 +1,4 @@
+
 const personnes = [
   {
     id: 1,
@@ -132,6 +133,8 @@ function resetPersonne() {
   document.getElementById('reset')
   window.location.reload();
 }
+
+
 function incrementerCorrection(id) {
   const utilisateur = personnes.find(user => user.id === id);
 
@@ -142,7 +145,7 @@ function incrementerCorrection(id) {
     else {
       utilisateur.correction++;
       $.ajax({
-        url: 'http://localhost/alog/asset/bdd/user.php',
+        url: './alog/asset/bdd/user.php',
         type: 'POST',
         data: {
           id: utilisateur.id,
@@ -156,7 +159,7 @@ function incrementerCorrection(id) {
 
 function fetchData() {
   $.ajax({
-    url: 'http://localhost/alog/asset/bdd/aff.php',
+    url: './asset/bdd/aff.php',
     type: 'GET',
     success: function (data) {
       const div = document.getElementById('user');
