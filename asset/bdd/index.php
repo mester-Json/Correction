@@ -1,8 +1,8 @@
 <?php
 define('HOST', 'localhost');
 define('DB_Name', 'Corection');
-define('USER', '');
-define('PASS', '');
+define('USER', 'root');
+define('PASS', '157326');
 
 
 
