@@ -164,7 +164,7 @@ function fetchData() {
     success: function (data) {
       const div = document.getElementById('user');
 
-      div.innerHTML = data;
+      div.innerText = data;
       div.style.color = "white";
       div.style.fontSize = "17px";
       div.style.fontFamily = "Arial";
