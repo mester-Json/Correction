@@ -1,5 +1,5 @@
 <?php
-define('HOST', 'localhost');
+define('HOST', 'http://127.0.0.1/phpmyadmin/');
 define('DB_Name', 'Corection');
 define('USER', 'root');
 define('PASS', '157326');
